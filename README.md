@@ -13,7 +13,7 @@ La plataforma está formada por:
 
 * Aplicación móvil para usuarios finales, orientada a la búsqueda, reserva y gestión de plazas de aparcamiento.
 
-*Aplicación de gestión para empresas, enfocada en la administración, monitorización y monetización de aparcamientos.
+* Aplicación de gestión para empresas, enfocada en la administración, monitorización y monetización de aparcamientos.
 
 * API REST centralizada, que actúa como núcleo del sistema y punto de integración para terceros.
 
