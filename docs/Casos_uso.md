@@ -1,6 +1,6 @@
 ## Diagrama de casos de uso
 
-<img src="../Images/Diagramas/CasosDeUso.drawio.png">
+<img src="../images/diagramas/Diagrama_caso_de_uso.drawio.png">
 
 ## Especificación de Actores y Operaciones
 
