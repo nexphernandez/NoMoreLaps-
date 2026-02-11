@@ -1,6 +1,6 @@
 # Anteproyecto – NoMoreLaps
 
-![NoMoreLaps Logo](../Images/Logo.png)
+![NoMoreLaps Logo](../images/Logo.png)
 
 **Autores:** Nicolás Expósito Hernández y Alejandro Díaz Luis  
 **Fecha:** Febrero 2026
