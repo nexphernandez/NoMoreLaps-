@@ -3,345 +3,343 @@
 ![NoMoreLaps Logo](../images/Logo.png)
 
 **Autores:** Nicolás Expósito Hernández y Alejandro Díaz Luis  
-**Fecha:** Febrero 2026
+
+**Tutor**: Eleazar Morales Díaz
+
+**Ciclo**: Desarrollo de Aplicaciones Multiplataforma
+
+**Periodo de ejecución**: Febrero 2026 – Mayo 2026
 
 ---
 
 ## Índice de Contenidos
 
-1. [Introducción](#introducción)
-2. [Planteamiento del Problema](#planteamiento-del-problema)
-3. [Justificación](#justificación)
-4. [Objetivos](#objetivos)
-5. [Marco Teórico/Tecnológico](#marco-teóricotecnológico)
-6. [Metodología](#metodología)
-7. [Alcance y Limitaciones](#alcance-y-limitaciones)
-8. [Integración del Calendario](#integración-del-calendario)
-9. [Sistema de Precios y Sanciones](#sistema-de-precios-y-sanciones)
-10. [Recursos](#recursos)
+1. [Introducción](#1.-Introducción)
+2. [Origen, contextualización y justificación del proyecto](##2.-Origen,-contextualización-y-justificación-del-proyecto)
+3. [Objetivo general del proyecto](#objetivo-general-del-proyecto)
+4. Descripción del proyecto (alcance)
+  4.1 Aplicación móvil Usuario
+  4.2 Aplicación móvil Empresa
+  4.3 Backend
+  4.4 API pública para integración empresarial
+5. Tareas
+6. Cronograma
+7. Recursos humanos y materiales
+8. Política de seguimiento y control de calidad
+9. Cláusulas
+10. Plan de marketing
+11. Plan de sostenibilidad
+12. Estudio de riesgos
+13. Arquitectura del sistema
+14. Simulación de costes
 
 ---
 
-## Introducción
+## 1. Introducción
 
-**NoMoreLaps** es una aplicación móvil y plataforma web diseñada para mejorar la movilidad urbana facilitando la búsqueda de aparcamiento en tiempo real. 
+El presente documento describe el anteproyecto del sistema NoMoreLaps, desarrollado dentro del módulo de Proyecto del Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Multiplataforma.
 
-### Características Principales
+En él se detallan la planificación, alcance, organización del trabajo, recursos, control de calidad y viabilidad del sistema conforme a las directrices del instituto.
 
-La aplicación permite a los usuarios:
+## 2. Origen, contextualización y justificación del proyecto
 
-- Localizar plazas libres en tiempo real
-- Consultar precios y horarios disponibles
-- Realizar reservas de manera rápida
-- Recibir descuentos automáticos según disponibilidad y hora
+La búsqueda de aparcamiento en entornos urbanos genera:
 
-Se conecta con los sistemas de gestión de las empresas de parking mediante una **API estándar**, lo que permite centralizar la información de manera confiable y actualizada.
+* Congestión de tráfico
 
-### Diferenciadores
+* Pérdida de tiempo
 
-NoMoreLaps se diferencia de otras soluciones existentes al integrar:
+* Incremento de emisiones contaminantes
 
-- **Lectura del calendario del usuario** para sugerir estacionamientos cerca de sus eventos
-- **Cálculo de precios dinámicos** y descuentos según disponibilidad
-- **Aplicación de sanciones automáticas** si no se respeta el horario de reserva
+* Gestión ineficiente de parkings privados
 
----
+NoMoreLaps surge como una solución tecnológica multiplataforma que digitaliza la gestión de aparcamientos mediante:
 
-## Planteamiento del Problema
+* Aplicación móvil para usuarios
 
-En muchas ciudades, encontrar aparcamiento es una tarea complicada que genera:
+* Aplicación móvil para empresas
 
-  - Estrés en los conductores
-  - Pérdida de tiempo considerable
-  - Congestión vehicular en zonas urbanas
+* API REST segura con integración externa
 
-### Problemas de Soluciones Actuales
+El proyecto se contextualiza dentro del ámbito de Smart Cities y digitalización de servicios urbanos.
 
-Las aplicaciones existentes ofrecen información básica de disponibilidad, pero **NO**:
+## 3. Objetivo general del proyecto
 
-  - Integran los horarios personales del usuario
-  - Permiten descuentos automáticos según demanda
-  - Imponen sanciones si no se respeta la reserva
-  - Optimizan la búsqueda según eventos del calendario
+Desarrollar una plataforma compuesta por:
 
-**Conclusión:** Existe un hueco en el mercado que NoMoreLaps busca cubrir, ofreciendo un sistema completo y en tiempo real que beneficie tanto a usuarios como a empresas de parking.
+* Aplicación móvil para usuarios
 
----
+* Aplicación móvil para empresas
 
-## Justificación
+* Backend centralizado con API REST segura
 
-La aplicación NoMoreLaps permitirá:
+El sistema permitirá gestionar reservas de aparcamiento con:
 
-  - **Mejorar la eficiencia** de aparcamiento en zonas urbanas
-  - **Ajustar precios dinámicamente** según demanda (beneficio para empresas)
-  - **Integrar el calendario del usuario** para optimizar reservas y evitar conflictos
-  - **Reducir tiempo de búsqueda** significativamente para los usuarios
-  - **Integrar información en tiempo real** desde la API del proveedor
-  - **Evitar infracciones** mediante control de horarios y sanciones automáticas
+* Precios dinámicos
 
----
+* Integración con calendario
 
-## Objetivos
+* Aplicación automática de sanciones
 
-### Objetivo General
+* API pública para integración empresarial
 
-Desarrollar una aplicación móvil y web que permita **gestionar, localizar y reservar aparcamientos en tiempo real**, integrando precios dinámicos, sanciones y planificación basada en el calendario del usuario.
+## 4. Descripción del proyecto (alcance)
 
-### Objetivos Específicos
+### 4.1 Aplicación móvil Usuario
 
-1. Implementar la **API** que conecte los sistemas de las empresas con la app
-2. Desarrollar el **módulo de reservas** con control de horarios y sanciones automáticas
-3. **Integrar el calendario del usuario** para sugerir plazas cercanas a eventos programados
-4. Permitir el **registro de precios** por parte de las empresas y aplicar descuentos automáticos según disponibilidad
-5. Crear la **interfaz de usuario** (front-end) para consultar disponibilidad, realizar reservas y visualizar información del parking
+* Registro e inicio de sesión
 
----
+* Geolocalización de parkings
 
-## Marco Teórico/Tecnológico
+* Reserva de plaza
 
-### 5.1 Lenguajes y Frameworks
+* Historial de reservas
 
-| Componente | Tecnología |
-|------------|-----------|
-| **Front-end Móvil** | React Native + Expo |
-| **Front-end Web** | React |
-| **Back-end/API** | Java + Spring Boot |
-| **Base de Datos** | SQLite |
-| **Mapas** | Google Maps API |
-| **Calendario** | Google Calendar, iCal |
-| **Autenticación** | JWT (JSON Web Tokens) |
-| **Control de Versiones** | GitHub |
-| **Gestión de Tareas** | GitHub Kanban (Issues) |
-| **Herramientas** | VS Code, Docker |
+* Visualización de sanciones
 
-### 5.2 Estructura de la Base de Datos
+* Integración con calendario
 
-#### Tablas Principales
+### 4.2 Aplicación móvil Empresa
 
-| Tablas | Descripción |
-|-------|------------|
-| **Usuarios** | Información de usuarios, empresas y administradores |
-| **Parkings** | Información de parkings, ubicación, plazas, horarios y precio base |
-| **Reservas** | Datos de reservas con precios calculados y estado |
-| **Sanciones** | Registro de sanciones por incumplimiento de horario |
-| **CalendarioUsuario** | Eventos del calendario del usuario para integración |
-| **PreciosDinamicos** | Precios calculados según disponibilidad y hora |
+* Gestión de parkings
 
-### 5.3 Estructura de la API (Endpoints Principales)
+* Gestión de plazas
 
-#### 1. Registro de Aparcamiento
+* Configuración de precios dinámicos
 
-```json
-POST /api/parkings
-{
-  "empresaId": 123,
-  "nombre": "Parking Central",
-  "ubicacion": "Calle Mayor 10",
-  "plazasTotales": 50,
-  "horarios": "08:00-22:00",
-  "preciosBase": 2.5
-}
-```
+* Consulta de reservas
 
-#### 2. Consulta de Disponibilidad
+* Visualización de sanciones
 
-```json
-GET /api/parkings/123/disponibilidad
-{
-  "fecha": "2026-02-10",
-  "hora": "10:00"
-}
-```
+### 4.3 Backend
 
-#### 3. Reserva de Plaza
+Desarrollado con:
 
-```json
-POST /api/reservas
-{
-  "usuarioId": 45,
-  "parkingId": 123,
-  "fecha": "2026-02-10",
-  "horaEntrada": "10:00",
-  "horaSalida": "12:00"
-}
-```
+* Java + Spring Boot
 
-#### 4. Aplicación de Sanciones (tras 10 min de retraso)
+* Autenticación JWT
 
-```json
-POST /api/reservas/123/sancion
-{
-  "usuarioId": 45,
-  "motivo": "No respetó el horario de reserva",
-  "monto": 5.0
-}
-```
+* Validación mediante Swagger
 
-#### 5. Consulta de Calendario del Usuario
+* Control de roles
 
-```json
-GET /api/usuarios/45/calendario
-{
-  "fechaInicio": "2026-02-10",
-  "fechaFin": "2026-02-11"
-}
-```
+* Motor automático de sanciones (+10 minutos)
 
----
+* Cálculo de precios dinámicos
 
-## Metodología
+* Base de datos SQLite
 
-Se utilizará **Kanban en GitHub** para gestionar los issues. Cada tarea se moverá por columnas en el siguiente flujo:
+* Servidor externo con certificado digital SSL
 
-```
-Backlog → In Progress → In Review → Done
-```
+### 4.4 API pública para integración empresarial
 
-Esto permite un **flujo continuo de trabajo** y flexibilidad para priorizar según avance el proyecto.
+La plataforma dispondrá de endpoints públicos protegidos mediante API Key para que empresas puedan integrar el sistema en su propio software.
 
-### Fases de Desarrollo
+Funcionalidades expuestas:
 
-#### **Fase 1: Análisis y Diseño**
-  - Definición de casos de uso
-  - Diagramas de clases y arquitectura
-  - Diseño UI/UX de la aplicación
+* Consulta de disponibilidad
 
-#### **Fase 2: Desarrollo Back-end**
-  - Creación de API REST
-  - Capas de negocio
-  - Persistencia en SQLite
-  - Controladores y servicios
-  - Tests unitarios
+* Creación de reservas
 
-#### **Fase 3: Desarrollo Front-end**
-  - Interfaces de usuario
-  - Conexión a API
-  - Integración de Google Maps
-  - Integración de calendario
+* Consulta de reservas activas
 
-#### **Fase 4: Pruebas**
-  - Tests unitarios
-  - Pruebas de integración
-  - Pruebas de usuario (UAT)
+* Consulta de sanciones
 
-#### **Fase 5: Entrega Final**
-  - Documentación completa
-  - Video demostrativo
-  - Despliegue en servidor de pruebas
+* Sincronización de ocupación
 
----
+## 5. TAREAS DEL PROYECTO
 
-## Alcance y Limitaciones
+| Nº	| Tarea	| Descripción	| Duración (horas)	| Mes | 
+|------------|-----------|-----------|-----------|-----------|
+| 1	| Análisis y Diseño | Recogida de requisitos, casos de uso, diagramas UML y modelo entidad-relación	| 60	| Febrero | 
+| 2 |	Diseño Base de Datos	| Modelo relacional, script SQL e índices	| 40	| Febrero | 
+| 3 |	Desarrollo Backend	| Implementación API REST, JWT, CRUD, sanciones, precios dinámicos, Swagger, SSL	| 140	| Marzo – Abril | 
+| 4	| Desarrollo Apps Móviles	| Desarrollo app usuario y empresa, integración API, mapas y calendario	| 130	| Marzo – Abril |
+| 5	| Pruebas y Validación	| Pruebas funcionales y validación de endpoints con Swagger	| 30	| Mayo| 
+| 6	| Documentación y Defensa	| Redacción memoria y preparación presentación	| 20	| Mayo | 
+| | | TOTAL	| | 420 horas | Febrero – Mayo | 
 
-### 7.1 Alcance
+## 6. CRONOGRAMA DEL PROYECTO
 
-**Funcionalidades incluidas:**
+| Tarea	| Febrero	| Marzo	| Abril	| Mayo | 
+|------------|-----------|-----------|-----------|-----------|
+| Análisis y Diseño	| ✔	 |  |  |  | 	
+| Diseño Base de Datos	| ✔	 |  |  |  | 	
+| Desarrollo Backend	|  | ✔ | ✔ |  | 	
+| Desarrollo Apps		|  | ✔ | ✔ |  | 	
+| Pruebas		|  |  |  | ✔ | 	
+| Documentación		|  |  |  | ✔ | 	
 
-  - Registro de parkings y precios por parte de empresas
-  - Consulta de disponibilidad en tiempo real
-  - Integración con calendario del usuario
-  - Aplicación de sanciones por retraso en horarios
-  - Descuentos automáticos según disponibilidad y hora
-  - Interfaz web y móvil
-  - Sistema de autenticación con JWT
+## 7. RESUMEN DE RECURSOS HUMANOS
 
-### 7.2 Limitaciones
+### 7.1 Recursos Humanos
+| Rol	| Nº Personas |	Funciones	| Dedicación |
+|------------|-----------|-----------|-----------|
+| Desarrollador Backend |	1	| API REST, seguridad, base de datos, lógica de negocio |	210 h |
+| Desarrollador Frontend Mobile	| 1	| Aplicaciones móviles, integración API, UI	| 210 h |
+| Total equipo	| 2 personas	| Desarrollo completo del sistema	| 420 h |
 
-**Funcionalidades NO incluidas:**
+### 7.2 Recursos Materiales
 
-  - Reconocimiento automático de plazas libres mediante sensores físicos (dependerá de input manual de empresas)
-  - La app dependerá de que las empresas integren correctamente la API
-  - La gestión de pagos se realizará fuera de la plataforma (solo cálculo de montos)
-  - No incluye sistema de notificaciones push en esta versión inicial
+* 2 ordenadores
+
+* 2 dispositivos móviles
+
+* Visual Studio Code
+
+* GitHub + Kanban
+
+* Servidor externo
+
+* Certificado digital SSL
+
+* Swagger
+
+
+## 8. Política de seguimiento y control de calidad
+
+* Control de versiones con GitHub
+
+* Gestión mediante Kanban
+
+* Revisión semanal
+
+* Validación endpoints con Swagger
+
+* Pruebas funcionales en ambas apps
+
+* Validación de roles y seguridad
+
+
+### 9. Cláusulas
+
+* Prioridad a funcionalidades críticas en caso de retraso
+
+* Entrega completa y funcional antes de defensa
+
+* Entrega de código, documentación y presentación
+
+## 10. Plan de Marketing
+
+### 10.1 Público objetivo
+
+* Conductores urbanos
+
+* Empresas con parkings
+
+### 10.2 Propuesta de valor
+
+* Integración calendario
+
+* Sanciones automáticas
+
+* Precios dinámicos
+
+* API pública profesional
+
+### 10.3 Modelo de ingresos
+
+* Comisión por reserva (5–10%)
+
+* Suscripción mensual empresas
+
+### 10.4 Objetivos primer año
+
+* 500 usuarios
+
+* 20 empresas
+
+* 1.000 reservas mensuales
 
 ---
 
-## Integración del Calendario
+## 11. Plan de Sostenibilidad
 
-La aplicación solicitará **permisos de acceso al calendario** del usuario (Google Calendar, Outlook, iCal, etc.).
+### 11.1 Económica
 
-### Funcionalidades
+Modelo mixto de ingresos.
 
-  - **Lectura de eventos próximos** en el calendario del usuario
-  - **Sugerencias automáticas** de reservas de aparcamiento cerca de eventos programados
-  - **Optimización de horarios** y ubicaciones basada en la agenda del usuario
-  - **Alertas preventivas** antes de eventos importantes para recordar la reserva
+### 11.2 Social
 
-### Beneficios
+Optimización del tiempo urbano.
 
-  - Reduce el tiempo de búsqueda manual de parking
-  - Evita retrasos por no encontrar estacionamiento
-  - Mejora la planificación del usuario
-  - Integración transparente con herramientas ya usadas
+### 11.3 Ambiental
 
----
+Reducción indirecta de emisiones.
 
-## Sistema de Precios y Sanciones
+## 12. Estudio de Riesgos
+### 12.1 Técnicos
 
-### Precios Dinámicos
+* Caída servidor
 
-  - **Base de cálculo:** Los precios varían según:
-    - Disponibilidad de plazas en tiempo real
-    - Hora del día (peak hours vs off-peak)
-    - Día de la semana
-    - Configuración de la empresa
+* Problemas SSL
 
-  - **Operación:**
-    - La empresa indica los precios **base y máximos**
-    - El sistema aplica **descuentos automáticos** si hay plazas libres
-    - Se recalculan en tiempo real según demanda
+* Fallos integración calendario
 
-### Sanciones por Incumplimiento
+* Errores en precios dinámicos
 
-  - **Tolerancia:** 10 minutos de gracia después de la hora de salida programada
-  - **Activación:** Si el usuario supera la tolerancia, se aplica automáticamente
-  - **Monto:** Determinado por la empresa (configurables en el sistema)
-  - **Registro:** Todas las sanciones quedan registradas en el perfil del usuario
-  - **Avisos:** La app notifica al usuario de sanciones aplicadas
+* Vulnerabilidades seguridad
 
-### Impacto en la Plataforma
+Medidas:
 
-| Beneficio para | Detalle |
-|---|---|
-| **Usuarios** | Precios justos según disponibilidad, incentivos por uso fuera de peak hours |
-| **Empresas** | Optimización de ingresos, control de ocupación, reducción de infracciones |
-| **Ciudades** | Reducción de congestión, mejora de movilidad urbana |
+* HTTPS obligatorio
 
-## Recursos
+* JWT + API Key
 
-### Recursos Humanos
+* Copias de seguridad
 
-  - **2 Desarrolladores:** Nicolás Expósito Hernández y Alejandro Díaz Luis
-  - **Testers:** Pruebas internas y externas
-  - **Asesor/Coordinador:** Supervisor del proyecto
+* Validaciones backend
 
-### Recursos Materiales
+### 12.2 Organizativos
 
-  - Ordenadores de desarrollo (2)
-  - Smartphones para testeo (iOS y Android)
-  - Servidores para pruebas (en nube o local)
+* Retrasos → priorización
 
-### Recursos Técnicos
+* Sobrecarga → división tareas
 
-| Categoría | Herramientas |
-|-----------|-------------|
-| **Back-end** | Java, Spring Boot, SQLite, Maven |
-| **Front-end** | React, React Native, Node.js, npm |
-| **Desarrollo** | VS Code, GitHub, Git |
-| **Testing** | JUnit, Jest, Postman |
-| **Deployment** | Docker, servidor de pruebas |
-| **Integraciones** | Google Maps API, Google Calendar API |
+### 12.3 Económicos
 
----
+* Control de costes infraestructura
 
-## Conclusiones
+## 13. Arquitectura del Sistema
 
-**NoMoreLaps** es un proyecto viable que resuelve un problema real en la movilidad urbana mediante:
+Arquitectura cliente-servidor basada en API REST:
 
-  - Innovación tecnológica (precios dinámicos, integración de calendario)
-  - Valor agregado (sanciones automáticas, descuentos inteligentes)
-  - Multi-plataforma (web y móvil)
-  - Modelo beneficioso para todas las partes (usuarios, empresas, ciudades)
+App Usuario (React Native)
+App Empresa (React Native)
+→ HTTPS (JWT / API Key)
+→ API REST Spring Boot
+→ Base de Datos SQLite
 
-El proyecto cuenta con los recursos, tecnología y equipo necesario para su desarrollo e implementación exitosa.
+Sistema externo empresa
+→ HTTPS + API Key
+→ API REST NoMoreLaps
+
+Seguridad:
+
+* HTTPS
+
+* JWT
+
+* API Key
+
+* Spring Security
+
+## 14. Simulación de Costes
+*Desarrollo*
+
+420 h × 20 €/h = 8.400 €
+
+*Servidor anual*
+
+300 €
+
+*Certificado SSL*
+
+80 €
+
+*Dominio*
+
+15 €
+
+Coste total estimado inicial: 8.795 €
 
