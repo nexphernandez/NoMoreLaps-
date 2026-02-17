@@ -14,24 +14,24 @@
 
 ## Índice de Contenidos
 
-1. [Introducción](#1.-Introducción)
-2. [Origen, contextualización y justificación del proyecto](##2.-Origen,-contextualización-y-justificación-del-proyecto)
-3. [Objetivo general del proyecto](#objetivo-general-del-proyecto)
-4. Descripción del proyecto (alcance)
-  4.1 Aplicación móvil Usuario
-  4.2 Aplicación móvil Empresa
-  4.3 Backend
-  4.4 API pública para integración empresarial
-5. Tareas
-6. Cronograma
-7. Recursos humanos y materiales
-8. Política de seguimiento y control de calidad
-9. Cláusulas
-10. Plan de marketing
-11. Plan de sostenibilidad
-12. Estudio de riesgos
-13. Arquitectura del sistema
-14. Simulación de costes
+1. [Introducción](#1-introducción)
+2. [Origen, contextualización y justificación](#2-origen-contextualización-y-justificación-del-proyecto)
+3. [Objetivo general del proyecto](#3-objetivo-general-del-proyecto)
+4. [Descripción del proyecto (alcance)](#4-descripción-del-proyecto-alcance)
+    * [4.1 Aplicación móvil Usuario](#41-aplicación-móvil-usuario)
+    * [4.2 Aplicación móvil Empresa](#42-aplicación-móvil-empresa)
+    * [4.3 Backend](#43-backend)
+    * [4.4 API pública para integración empresarial](#44-api-pública-para-integración-empresarial)
+5. [Tareas](#5-tareas)
+6. [Cronograma](#6-cronograma)
+7. [Recursos humanos y materiales](#7-recursos-humanos-y-materiales)
+8. [Política de seguimiento y control de calidad](#8-política-de-seguimiento-y-control-de-calidad)
+9. [Cláusulas](#9-cláusulas)
+10. [Plan de marketing](#10-plan-de-marketing)
+11. [Plan de sostenibilidad](#11-plan-de-sostenibilidad)
+12. [Estudio de riesgos](#12-estudio-de-riesgos)
+13. [Arquitectura del sistema](#13-arquitectura-del-sistema)
+14. [Simulación de costes](#14-simulación-de-costes)
 
 ---
 
@@ -40,6 +40,8 @@
 El presente documento describe el anteproyecto del sistema NoMoreLaps, desarrollado dentro del módulo de Proyecto del Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Multiplataforma.
 
 En él se detallan la planificación, alcance, organización del trabajo, recursos, control de calidad y viabilidad del sistema conforme a las directrices del instituto.
+
+---
 
 ## 2. Origen, contextualización y justificación del proyecto
 
@@ -63,6 +65,8 @@ NoMoreLaps surge como una solución tecnológica multiplataforma que digitaliza 
 
 El proyecto se contextualiza dentro del ámbito de Smart Cities y digitalización de servicios urbanos.
 
+---
+
 ## 3. Objetivo general del proyecto
 
 Desarrollar una plataforma compuesta por:
@@ -82,6 +86,8 @@ El sistema permitirá gestionar reservas de aparcamiento con:
 * Aplicación automática de sanciones
 
 * API pública para integración empresarial
+
+---
 
 ## 4. Descripción del proyecto (alcance)
 
@@ -147,7 +153,9 @@ Funcionalidades expuestas:
 
 * Sincronización de ocupación
 
-## 5. TAREAS DEL PROYECTO
+---
+
+## 5. TAREAS
 
 | Nº	| Tarea	| Descripción	| Duración (horas)	| Mes | 
 |------------|-----------|-----------|-----------|-----------|
@@ -159,7 +167,9 @@ Funcionalidades expuestas:
 | 6	| Documentación y Defensa	| Redacción memoria y preparación presentación	| 20	| Mayo | 
 | | | TOTAL	| | 420 horas | Febrero – Mayo | 
 
-## 6. CRONOGRAMA DEL PROYECTO
+---
+
+## 6. CRONOGRAMA
 
 | Tarea	| Febrero	| Marzo	| Abril	| Mayo | 
 |------------|-----------|-----------|-----------|-----------|
@@ -170,7 +180,9 @@ Funcionalidades expuestas:
 | Pruebas		|  |  |  | ✔ | 	
 | Documentación		|  |  |  | ✔ | 	
 
-## 7. RESUMEN DE RECURSOS HUMANOS
+---
+
+## 7. Recursos humanos y materiales
 
 ### 7.1 Recursos Humanos
 | Rol	| Nº Personas |	Funciones	| Dedicación |
@@ -195,6 +207,7 @@ Funcionalidades expuestas:
 
 * Swagger
 
+---
 
 ## 8. Política de seguimiento y control de calidad
 
@@ -210,6 +223,7 @@ Funcionalidades expuestas:
 
 * Validación de roles y seguridad
 
+---
 
 ### 9. Cláusulas
 
@@ -218,6 +232,8 @@ Funcionalidades expuestas:
 * Entrega completa y funcional antes de defensa
 
 * Entrega de código, documentación y presentación
+
+---
 
 ## 10. Plan de Marketing
 
@@ -267,6 +283,8 @@ Optimización del tiempo urbano.
 
 Reducción indirecta de emisiones.
 
+---
+
 ## 12. Estudio de Riesgos
 ### 12.1 Técnicos
 
@@ -300,6 +318,8 @@ Medidas:
 
 * Control de costes infraestructura
 
+---
+
 ## 13. Arquitectura del Sistema
 
 Arquitectura cliente-servidor basada en API REST:
@@ -323,6 +343,8 @@ Seguridad:
 * API Key
 
 * Spring Security
+
+---
 
 ## 14. Simulación de Costes
 *Desarrollo*
